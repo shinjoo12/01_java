@@ -23,11 +23,12 @@ public class Application02 {
         System.out.println(1.23 % 1.0);
 
         // "123" + "12"  문자열+문자열
-        System.out.println("123"+"12");
+        System.out.println("123"+"12");  //12312
         //"123" - "12"    문자열 뺄수없음
         //"123" * "12"
         //"123"+12
         System.out.println("123"+12);    //문자열+숫자 12312
+
 
 
 
