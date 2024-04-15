@@ -97,7 +97,8 @@ public class Application01 {
         //double d =isTrue;
 
 
-
+        //long eight =8;
+        //float four =eight;
 
 
     }
