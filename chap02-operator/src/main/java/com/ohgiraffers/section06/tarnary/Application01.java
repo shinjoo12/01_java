@@ -19,7 +19,7 @@ public class Application01 {
 
         // 삼항연산자 중첩 사용
         int num3 =5;
-        int num4=0;
+        int num4= 0;
         int num5=-5;
         String result3 = (num3>0)? "양수이다." : (num3==0)? "0이다": "음수이다";
         //중첩 삼항 연산자 사용
@@ -31,6 +31,12 @@ public class Application01 {
 
         String result5 = (num5>0)? "양수" : (num5==0)? "0이다" : "음수";
         System.out.println("num5는 "+ result5+"이다");
+
+
+
+
+
+
 
 
 
