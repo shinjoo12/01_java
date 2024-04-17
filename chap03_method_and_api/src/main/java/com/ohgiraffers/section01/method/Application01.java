@@ -18,7 +18,6 @@ public class Application01 {
 
         System.out.println("main() 종료함");
 
-
     }
 
     //public->접근제어자    return(반환) 되는 값 없으면 void//methodA->메소드이름
@@ -31,14 +30,8 @@ public class Application01 {
 
     public void methodB() {
         System.out.println("methodB()를 시작함");
-        methodC();
         System.out.println("methodB()를 종료됨");
 
     }
-    public void methodC(){
-        System.out.println("methodC() 시작됨");
-        System.out.println("methodC() 종료됨");
-    }
-
 
 }

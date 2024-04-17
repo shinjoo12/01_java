@@ -10,6 +10,8 @@ public class Application01 {
         * 더 쉽게 누군가 작성해 놓은 소스코드를 가져다 사용하는 것이다.
         * */
 
-        System.out.println(java.lang.Math.abs(3.14)); //lang class명
+
+                //static 정적메모리(변하지 않는 메모리공간,사이즈 변경No)   //자바는 os에 대한 기능을 직접적으로 사용불가
+        System.out.println(java.lang.Math.abs(3.14)); //lang class명    abs(3.14)->메소드
     }
 }
