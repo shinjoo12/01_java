@@ -43,12 +43,11 @@ public class Application01 {
             System.out.println(x + "/" + y + "="+ (x/y));
         }
 
+    }
+
+}
 
 
-
-        }
-
-        }
 
      /*
      * 계산기 만들기
@@ -63,6 +62,8 @@ public class Application01 {
 //split 문자열 분할 " " 띄어쓰기 기준으로 분할
 //parsInt 는 문자열을 정수로 전환
 // integer  class
+
+
 
 
 

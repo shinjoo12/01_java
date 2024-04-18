@@ -2,7 +2,7 @@ package com.ohgiraffers.section01.conditional;
 
 import java.util.Scanner;
 
-public class quiz1 {
+public class qq {
     public static void main(String[] args) {
         A_If aIf = new A_If();
         aIf.testSimpleIfStatenant();
