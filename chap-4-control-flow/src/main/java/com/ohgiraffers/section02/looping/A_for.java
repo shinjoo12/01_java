@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class A_for {
     public void testSimpleForStatement(){
         /*
-        * [for문 표현식]
+        * [for문 표현식] 반복되는 횟수를 알고있을때 사용
         * for(초기식; 조건식; 증감식){
         * // 조건식이 참인 경우 실행할 구문 == 반복할 구문
         * }
