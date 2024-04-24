@@ -6,7 +6,7 @@ import com.ohgiraffers.order.service.OrderService;
 
 public class OrderController { //필수로 입력되어야 하는 클래스
 
-    private OrderService orderService= new OrderService();
+    private final OrderService orderService= new OrderService();
 
 
     public String order(OrderDTO orderDTO){

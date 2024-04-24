@@ -5,6 +5,16 @@ public class OrderDTO {
     private int price;
     private int quantity;
 
+    public OrderDTO(){
+
+    }
+
+    public OrderDTO(String menuName,int price,int quantity){
+        this.menuName = menuName;
+        this.price =price;
+        this.quantity =quantity;
+    }
+
     public int getPrice() {
         return price;
     }

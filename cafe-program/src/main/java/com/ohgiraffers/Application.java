@@ -3,6 +3,7 @@ package com.ohgiraffers;
 import com.ohgiraffers.order.controller.OrderController;
 import com.ohgiraffers.order.dto.OrderDTO;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.function.ObjDoubleConsumer;
 
@@ -12,6 +13,7 @@ public class Application {
         OrderController orderController = new OrderController();
         boolean order = true;
         String result ="";
+
 
         while(order){
 
@@ -24,19 +26,21 @@ public class Application {
 
             int input =sc.nextInt();
             sc.nextLine();
-            OrderDTO orderDTO = new OrderDTO();
+
 
             switch (input){
                 case 1: //주문등록
+
                     System.out.println("주문할 메뉴 이름을 등록해주세요: ");
-                    orderDTO.setMenuName(sc.nextLine());
+                    String menuName =sc.nextLine();
                     System.out.println("수량을 입력해주세요: ");
                     int quantity = sc.nextInt();
                     System.out.println("가격을 입력해주세요: ");
-                    int price =sc.nextInt();
-                    orderDTO.setQuantity(quantity, price);
+                    int price = sc.nextInt();
 
-                    result = orderController.order(orderDTO);
+                    OrderDTO orderDTO = new OrderDTO(menuName,quantity,price);
+
+                    result = orderController.order(orderDTO);    //주문데이터 생성되는 부분
 
                     break;
                 case 2: //주문삭제
@@ -46,7 +50,8 @@ public class Application {
                     orderController.orderModify();
                     break;
                 case 4: //주문 상세조회
-                    orderController.orderDetail();
+                    OrderDTO orderDetail = orderController.orderDetail();
+                    System.out.println(orderDetail);
                     break;
                 case 5: //주문 전체조회
                     orderController.orderRead();
@@ -59,7 +64,11 @@ public class Application {
 
             System.out.println("주문을 종료하시겠나요?");
             order =sc.nextBoolean();
+
+            }
+
+            }
         }
 
-    }
-}
+
+

@@ -5,7 +5,8 @@ import com.ohgiraffers.order.dto.OrderDTO;
 import java.util.ArrayList;
 
 public class OrderRepository {
-    ArrayList orders = new ArrayList();
+
+    private final ArrayList orders = new ArrayList();
 
     public String order(OrderDTO orderDTO){
         //0
@@ -18,5 +19,10 @@ public class OrderRepository {
         }
         return "등록성공";
 
-}
+    }
+
+    public OrderDTO detailView(int index){
+        return (OrderDTO) orders.get(index);
+
+    }
 }
