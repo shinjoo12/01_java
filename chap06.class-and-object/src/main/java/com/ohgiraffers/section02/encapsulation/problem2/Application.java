@@ -16,8 +16,8 @@ public class Application {
         book[2].bookNumber =5;
 
         Human shin = new Human();
-        shin.books = book[0];
-        shin.humanName = "ddd";
+      //  shin.books = book[0];
+       // shin.humanName = "ddd";
 
 
 
