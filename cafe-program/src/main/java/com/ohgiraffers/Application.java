@@ -16,42 +16,46 @@ public class Application {
 
 
         while(order){
-
             System.out.println("1.주문 등록");
             System.out.println("2.주문 삭제");
             System.out.println("3.주문 수정");
             System.out.println("4.주문 상세조회");
             System.out.println("5.주문 전체조회");
             System.out.print("어떤 메뉴를 동작하시겠나요?");
-
             int input =sc.nextInt();
             sc.nextLine();
 
 
             switch (input){
                 case 1: //주문등록
+                    System.out.println("몇개의 음료를 주문하시겠나요?");  //OrderDTO 에
+                    int cnt = sc.nextInt();
+                    sc.nextLine();
+                    OrderDTO[] orders = new OrderDTO[cnt];
+                    for (int i = 0; i < orders.length; i++) {
+                        System.out.println("주문할 메뉴 이름을 등록해주세요: ");
+                        String menuName =sc.nextLine();
+                        System.out.println("수량을 입력해주세요: ");
+                        int quantity = sc.nextInt();
+                        System.out.println("가격을 입력해주세요: ");
+                        int price = sc.nextInt();
+                        orders[i] = new OrderDTO(menuName,quantity,price);
+                    }
 
-                    System.out.println("주문할 메뉴 이름을 등록해주세요: ");
-                    String menuName =sc.nextLine();
-                    System.out.println("수량을 입력해주세요: ");
-                    int quantity = sc.nextInt();
-                    System.out.println("가격을 입력해주세요: ");
-                    int price = sc.nextInt();
-
-                    OrderDTO orderDTO = new OrderDTO(menuName,quantity,price);
-
-                    result = orderController.order(orderDTO);    //주문데이터 생성되는 부분
+                    result = orderController.order(orders[i]);    //주문데이터 생성되는 부분
 
                     break;
                 case 2: //주문삭제
+                    System.out.println("삭제할 번호를 입력하세요");
+                    int no = sc.nextInt();
                     orderController.orderDelete();
                     break;
                 case 3: //주문수정
                     orderController.orderModify();
                     break;
                 case 4: //주문 상세조회
-                    OrderDTO orderDetail = orderController.orderDetail();
-                    System.out.println(orderDetail);
+                 //     OrderDTO orderDetail = orderController.OrderService();
+                  //    System.out.println(orderDetail);
                     break;
                 case 5: //주문 전체조회
                     orderController.orderRead();
