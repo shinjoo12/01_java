@@ -18,7 +18,7 @@ public class Subclass extends  SuperClass{
 //    @Override 메서드의 시그니처가 다른 경우 오버라이드 불가능
 //    protected void protectedMethod(int num,int num2) {
 //        super.protectedMethod(num);
-    }
+  //  }
 
 //    @Override 반환 타입이 다른 경우 오버라이딩 불가능
 //    public String method(int num) {
